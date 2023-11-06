@@ -74,7 +74,7 @@ window.addEventListener('scroll', function() {
 function selectedLink() {
   const scrollPosition = window.scrollY; // Obtenir la position de défilement actuelle de la fenêtre
 
-  // Calculer la hauteur de la barre de navigation pour déclencher la mise à jour de la classe
+  
   const navbarHeight = navbar.offsetHeight + 100;
   const links = document.querySelectorAll('.links a');
 
@@ -82,10 +82,9 @@ function selectedLink() {
     // Obtenir l'élément de section associé au lien en utilisant son attribut "href"
     const section = document.querySelector(link.getAttribute('href'));
 
-    // Calcule la position supérieure de la section en prenant en compte la barre de navigation
     const sectionTop = section.getBoundingClientRect().top + window.scrollY - navbarHeight;
 
-    // Calcule la position inférieure de la section
+    
     const sectionBottom = sectionTop + section.offsetHeight;
 
     link.classList.toggle("active", scrollPosition >= sectionTop && scrollPosition < sectionBottom);
@@ -113,6 +112,8 @@ inputTel.addEventListener('input', () => {
 });
 
 
+
+//---------------------------MODAL
 
 // Sélectionnez tous les éléments avec la classe "project-link" sur la page entière
 const projectLinks = document.querySelectorAll(".project-link");
@@ -147,9 +148,9 @@ const confirmationModal = document.getElementById('confirmationModal');
 const closeButton = confirmationModal.querySelector('.close');
 
 contactForm.addEventListener('submit', (event) => {
-  event.preventDefault(); // Empêche le formulaire de se soumettre
+  event.preventDefault(); 
 
-  // Vérifiez si tous les champs sont remplis (ajoutez autant de conditions que nécessaire)
+
   const nameInput = document.getElementById('name');
   const emailInput = document.getElementById('email');
   const phoneInput = document.getElementById('phone');
@@ -162,10 +163,9 @@ contactForm.addEventListener('submit', (event) => {
     objetInput.value.trim() !== '' &&
     messageInput.value.trim() !== ''
   ) {
-    // Affichez la modale de confirmation
+    
     confirmationModal.style.display = 'block';
 
-    // Associez un gestionnaire d'événement pour fermer la modale
     closeButton.addEventListener('click', () => {
       confirmationModal.style.display = 'none';
     });
