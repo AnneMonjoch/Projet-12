@@ -809,3 +809,13 @@ textarea,
 
 
 
+/*responsive*/
+
+@media screen and (max-width: 600px) {
+  .navbar ul {
+   display: none;
+  }
+  .menu-toggle {
+    display: block; /* Affiche le bouton de menu */
+  }
+}
