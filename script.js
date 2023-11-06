@@ -114,9 +114,7 @@ inputTel.addEventListener('input', () => {
 
 
 
-//---------------------------MODAL
-
-// Sélectionnez tous les éléments avec la classe "project-link"
+// Sélectionnez tous les éléments avec la classe "project-link" sur la page entière
 const projectLinks = document.querySelectorAll(".project-link");
 
 // Associez un gestionnaire d'événement à chaque lien de projet
@@ -127,7 +125,7 @@ projectLinks.forEach((link, index) => {
   });
 });
 
-// Sélectionnez tous les éléments avec la classe "close" (bouton de fermeture)
+// Sélectionnez tous les éléments avec la classe "close" sur la page entière
 const closeButtons = document.querySelectorAll(".close");
 
 // Associez un gestionnaire d'événement pour fermer les modales
@@ -137,6 +135,7 @@ closeButtons.forEach((button) => {
     modal.style.display = "none";
   });
 });
+
 
 
 
